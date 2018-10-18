@@ -3,7 +3,7 @@ package net.crazycraftland.spigot.permissionsystem.utils;
 import java.util.List;
 import java.util.UUID;
 
-public class FileManager implements  FileInterface {
+public class FileManager implements FileInterface {
 
     private FileType fileType;
 
