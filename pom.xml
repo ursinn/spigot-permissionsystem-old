@@ -11,7 +11,7 @@
 
     <name>PermissionSystem</name>
 
-    <description>Desc</description>
+    <description>Permission System</description>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

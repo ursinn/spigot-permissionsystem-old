@@ -3,5 +3,5 @@ version: ${project.version}
 main: net.crazycraftland.spigot.permissionsystem.PermissionSystem
 prefix: PermSystem
 authors: [ursinn]
-description: Desc
+description: Permission System
 website: https://dev.CrazyCraftLand.net/Spigot/PermissionSystem
