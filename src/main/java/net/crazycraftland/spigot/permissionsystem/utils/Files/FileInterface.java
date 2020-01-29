@@ -1,4 +1,4 @@
-package net.crazycraftland.spigot.permissionsystem.utils;
+package net.crazycraftland.spigot.permissionsystem.utils.Files;
 
 import java.util.List;
 import java.util.UUID;

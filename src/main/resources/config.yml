@@ -1,0 +1,30 @@
+# PermissionSystem Configuration File
+
+# This enables the check for updates.
+# If this is set to true, you will get notifications about updates.
+# If don't want to check for updates, set this to false.
+update-check: true
+
+# This enables metrics.
+# If you don't want metrics enabled set this to false.
+metrics: true
+
+# file -> yaml File Mode
+# mysql -> mysql DB Mode
+# sql -> sql DB Mode
+file-type: file
+
+use-chat: true
+
+use-tablist: true
+
+# MySQL Data
+mysql:
+  host: "localhost"
+  username: "username"
+  password: "password"
+  database: "database"
+  port: "port"
+
+
+

@@ -1,6 +1,7 @@
 package net.crazycraftland.spigot.permissionsystem.command;
 
-import net.crazycraftland.spigot.permissionsystem.PermissionSystem;
+import net.crazycraftland.spigot.permissionsystem.utils.MessagesEnum;
+import net.crazycraftland.spigot.permissionsystem.utils.MessagesManager;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -9,16 +10,18 @@ public class Perm implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+        String Main_Permission = "perm.cmd";
+
         if (cmd.getName().equalsIgnoreCase("perm")) {
             if (args.length == 0) {
-                // Show Permission Plugin v%version% by %authors%
-                if (sender.hasPermission(PermissionSystem.getInstance().permCommandPermission)) {
+                sender.sendMessage(MessagesManager.getMessage(MessagesEnum.MADE_BY));
+                if (sender.hasPermission(Main_Permission)) {
                     // Show /perm help for help Message
                 }
                 return true;
             }
 
-            if (sender.hasPermission(PermissionSystem.getInstance().permCommandPermission)) {
+            if (sender.hasPermission(Main_Permission)) {
                 if (args.length == 1) {
                     if (args[0].equalsIgnoreCase("help")) {
                         sendHelpMessage(sender);

@@ -5,3 +5,5 @@ prefix: PermSystem
 authors: [ursinn]
 description: Permission System
 website: https://dev.CrazyCraftLand.net/Spigot/PermissionSystem
+commands:
+  perm:
