@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-				sh 'mvn clean package -Djar.finalName=PermissionSystem-CI-Build-#${BUILD_NUMBER}'
+				sh 'mvn clean package -Djar.finalName=PermissionSystem-#${BUILD_NUMBER}'
 			}
 			post {
 				success {
