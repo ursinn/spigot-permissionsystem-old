@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c) 2019 Ursin Filli
+ * Copyright (c) 2018 - 2020 Ursin Filli
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -23,23 +23,21 @@
  *
  */
 
-package net.crazycraftland.spigot.permissionsystem.listeners;
+package dev.ursinn.spigot.permissionsystem.utils;
 
-import net.crazycraftland.spigot.permissionsystem.PermissionSystem;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerJoinEvent;
+public enum MessagesEnum {
 
-public class PlayerJoin implements Listener {
+    PREFIX("prefix"), // §7[§bPerm§7]§f
+    MADE_BY("made.by"), // %prefix% Permission System v%version% by %authors%
+    NO_PERMISSION("no.permission"); //
 
-    @EventHandler
-    public void onJoin(PlayerJoinEvent e) {
-        if (!PermissionSystem.devBuild) {
-            if (e.getPlayer().hasPermission("perm.updater")) {
-                if (PermissionSystem.getInstance().updateChecker.isUpdate())
-                    e.getPlayer().sendMessage("§eAn update is available for PermissionSystem.");
-            }
-        }
+    private String name;
+
+    MessagesEnum(String name) {
+        this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
 }
